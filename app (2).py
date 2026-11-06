@@ -14,7 +14,7 @@ to predict whether a breast mass is **Malignant (M)** or **Benign (B)**.
 # Load saved models and preprocessing pipelines safely
 @st.cache_resource
 def load_assets():
-    scaler = joblib.load('models/scaler.joblib')
+    scaler = joblib.load('scaler.joblib')
     pca = joblib.load('models/pca_transformer.joblib')
     model = joblib.load('models/svc_model.joblib')
     return scaler, pca, model
